@@ -1,0 +1,51 @@
+*{
+   padding:0;
+   margin: 0;
+   box-sizing: content-box;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+
+.container{
+    margin-top: 5em;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    text-align: center;
+}
+select{
+    font-size: clamp(0.9em,20vw,1.1em);
+    min-height: 1.6em;
+    max-width: max-content;
+    border: 3px solid grey;
+    font-weight: bold;
+}
+select:focus{
+    outline: none;
+}
+label{
+    color: white;
+    font-size: 18px;
+}
+
+.formGrocery{
+    margin-top: 5em;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    text-align: center;
+}
+.formGrocery > div > label{
+  text-align: left;
+}
+.formGrocery input[type="button"]{
+    height: 2em; width: 2em;
+    font-size: 16px;
+    margin-left: 1em;
+}
+.formGrocery input[type="text"]{
+    height: 2em; width: 12em;
+    font-size: 16px;
+    cursor: pointer;
+    outline: none;
+}

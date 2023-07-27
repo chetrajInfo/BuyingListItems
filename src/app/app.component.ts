@@ -8,6 +8,9 @@ import { FormGroup, FormBuilder } from '@angular/forms';
 })
 export class AppComponent implements OnInit {
   myForm: FormGroup | any;
+  mygrocery: FormGroup | any;
+
+  showGroceryForm:boolean = false; 
 
   options = [
     { value: '', label: 'Choose the Lists' },
@@ -27,6 +30,12 @@ export class AppComponent implements OnInit {
     this.myForm = this.formBuilder.group({
       selectedList: [''] // Default value for the select element
     });
+  }
+
+   // Add this method to handle the change in the dropdown
+   onListSelect(event: any) {
+    const selectedValue = event.target.value;
+    this.showGroceryForm = selectedValue === "grocery"; // Show grocery form only when "grocery" is selected
   }
 
 }

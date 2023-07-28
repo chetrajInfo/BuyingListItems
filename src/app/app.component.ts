@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder } from '@angular/forms';
+import { GroceryOptionService } from './grocery-option.service';
 
 @Component({
   selector: 'app-root',
@@ -7,11 +8,15 @@ import { FormGroup, FormBuilder } from '@angular/forms';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  myForm: FormGroup | any;
-  mygrocery: FormGroup | any;
 
-  showGroceryForm:boolean = false; 
+  myForm!: FormGroup;
+  mygrocery!: FormGroup;
 
+
+  showGroceryForm:boolean = true; 
+
+  groceryOption!: any[]  // Declare the groceryOption property in the AppComponent
+  
   options = [
     { value: '', label: 'Choose the Lists' },
     { value: 'clothingAcces', label: 'Clothing And Accessory' },
@@ -24,13 +29,23 @@ export class AppComponent implements OnInit {
     { value: 'travel', label: 'Travel Lists' }
   ];
 
-  constructor(private formBuilder: FormBuilder) { }
+
+  constructor(private formBuilder: FormBuilder, private groceryOptionService: GroceryOptionService) { }
 
   ngOnInit() {
     this.myForm = this.formBuilder.group({
-      selectedList: [''] // Default value for the select element
+      selectedList: ['']
     });
+
+    this.mygrocery = this.formBuilder.group({
+      groceryName: [''],
+      groceryList: ['']
+    });
+
+    this.groceryOption = this.groceryOptionService.groceryOption; // Get the groceryOption from the service
   }
+
+  
 
    // Add this method to handle the change in the dropdown
    onListSelect(event: any) {

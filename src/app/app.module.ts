@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { GroceryOptionService } from './grocery-option.service';
 
 
 
@@ -16,7 +17,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     AppRoutingModule,
     ReactiveFormsModule // Add ReactiveFormsModule to the imports array
   ],
-  providers: [],
+  providers: [GroceryOptionService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

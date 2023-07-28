@@ -15,11 +15,21 @@
 <div class="formGrocery" *ngIf="showGroceryForm">
   <form [formGroup]="mygrocery">
     <div>
-      <label for="groceyName">Type Grocery Items</label>
+      <label>Grocery List</label>
+    </div>
+    <div>
+      <select formControlName="groceryList"> 
+        <option *ngFor="let option of groceryOption" [value]="option.value">{{ option.label }}</option>
+      </select> 
+      <input  type="button" value="Add" id="addBtn">
+    </div><br>
+    <div>
+      <label for="groceyName">If You Haven't Find Items Above Type Grocery Items Below.</label>
       </div>
       <div>
         <input type="text" name="groceryName" id="groceryName">
-        <input type="button" value="+"><input type="button" value="-">
+        <input type="button" value="+">
+        <input type="button" value="-">
     </div>
   </form>
 </div>

@@ -7,6 +7,7 @@ import { GroceryOptionService } from './grocery-option.service';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { MainpageComponent } from './mainpage/mainpage.component';
+import { ResetaccountComponent } from './resetaccount/resetaccount.component';
 
 
 
@@ -16,7 +17,8 @@ import { MainpageComponent } from './mainpage/mainpage.component';
     AppComponent,
     LoginComponent,
     RegisterComponent,
-    MainpageComponent
+    MainpageComponent,
+    ResetaccountComponent
   ],
   imports: [
     BrowserModule,

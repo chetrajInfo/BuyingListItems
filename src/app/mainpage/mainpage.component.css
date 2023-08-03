@@ -1,0 +1,104 @@
+*{
+    padding:0;
+    margin: 0;
+    box-sizing: content-box;
+   font-family: 'Times New Roman', Times, serif;
+ }
+ 
+ 
+ .container{
+     margin-top: 5em;
+     display: flex;
+     flex-direction: column;
+     justify-items: center;
+     text-align: center;
+ }
+ 
+ 
+ select{
+     font-size: clamp(0.9em,20vw,1.1em);
+     min-height: 1.6em;
+     max-width: max-content;
+     border: 3px solid grey;
+     font-weight: bold;
+ }
+ select:focus{
+     outline: none;
+ }
+ 
+ label{
+     color: white;
+     font-size: 18px;
+ }
+ 
+ .formGrocery {
+     margin: 5em 0 0 26vw;
+     display: flex;
+     flex-direction: column;
+     align-items: center; /* Center horizontally */
+     justify-content: center; /* Center vertically */
+     border: 2px inset white;
+     box-shadow: 1px 1px 2px grey;
+     width: 37vw;
+     padding: 1em;
+     min-width: 32vw;
+   }
+ 
+ .formGrocery label {
+     /* Add your custom label styles here */
+     font-size: 16px;
+     color:white;
+    
+   }
+ 
+ .formGrocery input[type="button"]{
+     height: 2em; width: 2em;
+     font-size: 16px;
+     margin-left: 1em;
+     margin-top: 0.5em;
+ }
+ 
+ .formGrocery input[type="text"]{
+     height: 2em; width: 12em;
+     font-size: 16px;
+     cursor: pointer;
+     outline: none;
+     cursor: pointer;
+     font-size: 18px;
+     padding-left: 2px;
+ }
+ #addBtn{
+  
+     width: 6vw;
+     font-weight: bold;
+     box-shadow: 1px 1px 2px white;
+     cursor: pointer;
+ 
+ }
+ #addedItem{
+     color: white;
+     font-size: 17px;
+     font-weight: 600;
+     cursor: pointer;
+     margin-top: 0.3em;
+     background-color: red;
+     /* Add flex properties */
+   display: flex;
+   align-items: center;
+   justify-content: space-between; /* This will push the '-' button to the right */
+    
+ }
+ .minusBtn{
+   margin: 0 0 0 15em;
+ }
+ 
+ 
+ @media screen and (max-width:600px) {
+     .formGrocery{
+         margin: 2em auto auto auto;
+         padding: auto;
+     
+         width: auto;
+     }
+   
+ }

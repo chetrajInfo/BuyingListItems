@@ -1,1 +1,35 @@
-<p>register works!</p>
+<div class="container">
+    <h2>Register Here.</h2>
+    <form [formGroup]="register">
+      <input type="text" formControlName="username" placeholder="Username" autocomplete="random-text">
+      <!-- Display an error message if username is not provided and the field is dirty (touched) -->
+      <div *ngIf="register.get('username')?.hasError('required') && register.get('username')?.touched" class="err">
+        Username is required.
+      </div>
+  
+      <input type="email" formControlName="email" placeholder="Email" autocomplete="random-text">
+      <!-- Display an error message if email is not provided or not a valid email and the field is dirty (touched) -->
+      <div *ngIf="register.get('email')?.hasError('required') && register.get('email')?.touched" class="err" >
+        Email is required.
+      </div>
+      <div *ngIf="register.get('email')?.hasError('email')" class="emailValid">
+        Invalid email format.
+      </div>
+  
+      <input type="password" formControlName="passwordOne" placeholder="Password">
+      <!-- Display an error message if password is not provided and the field is dirty (touched) -->
+      <div *ngIf="register.get('passwordOne')?.hasError('required') && register.get('passwordOne')?.touched" class="err">
+        Password is required.
+      </div>
+  
+      <input type="password" formControlName="passwordTwo" placeholder="Re-Type Password">
+      <!-- Display an error message if passwords don't match and the field is dirty (touched) -->
+      <div *ngIf="register.hasError('passwordsNotMatch') && register.get('passwordTwo')?.touched" class="err">
+        Passwords must match.
+      </div>
+  
+      <button>Login</button>
+      <p><a routerLink="/">Already Have Account. Click Here.</a></p>
+    </form>
+  </div>
+  

@@ -2,7 +2,8 @@
     padding:0;
     margin: 0;
     box-sizing: content-box;
-   font-family: 'Times New Roman', Times, serif;
+    font-family: 'Times New Roman', Times, serif;
+    background-color:rgb(196, 184, 184);
  }
  
  
@@ -12,6 +13,7 @@
      flex-direction: column;
      justify-items: center;
      text-align: center;
+     padding: 2em;
  }
  
  
@@ -28,7 +30,8 @@
  
  label{
      color: white;
-     font-size: 18px;
+     font-size: 1.5em;
+     text-shadow: 1px 1px 1px rgb(192, 175, 247);
  }
  
  .formGrocery {
@@ -37,7 +40,7 @@
      flex-direction: column;
      align-items: center; /* Center horizontally */
      justify-content: center; /* Center vertically */
-     border: 2px inset white;
+     border: 4px inset white;
      box-shadow: 1px 1px 2px grey;
      width: 37vw;
      padding: 1em;
@@ -48,7 +51,7 @@
      /* Add your custom label styles here */
      font-size: 16px;
      color:white;
-    
+     font-size: 18px;
    }
  
  .formGrocery input[type="button"]{
@@ -86,12 +89,21 @@
    display: flex;
    align-items: center;
    justify-content: space-between; /* This will push the '-' button to the right */
+   padding-left:1.2rem;
     
  }
  .minusBtn{
    margin: 0 0 0 15em;
  }
- 
+ button{
+    background-color: white;
+ }
+ button img{
+    height: 2.5em;
+    width: 3em;
+    border: none;
+    cursor: pointer;
+ }
  
  @media screen and (max-width:600px) {
      .formGrocery{

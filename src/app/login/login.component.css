@@ -12,7 +12,7 @@
     flex-direction: column;
     align-items: center;
     padding: 4em;
-  cursor: pointer;
+   cursor: pointer;
   }
   .container:hover{
     box-shadow: 1px 1px 2px 1px grey

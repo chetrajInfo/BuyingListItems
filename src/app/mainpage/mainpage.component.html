@@ -10,8 +10,7 @@
         </select>
       </div>
     </form>
-  </div>
-  
+
   
   <div class="formGrocery" *ngIf="showGroceryForm">
     <form [formGroup]="mygrocery">
@@ -25,7 +24,7 @@
         <input type="button" value="Add" id="addBtn" (click)="addItem()">
       </div><br>
       <div>
-        <label for="groceyName">If You Haven't Find Items Above Type Grocery Items Below.</label>
+        <label>If You Haven't Find Items Above Type Grocery Items Below.</label>
         </div>
         <div>
           <input type="text" formControlName="groceryName" id="groceryName" autocomplete="random-text">
@@ -35,9 +34,14 @@
       <div *ngFor="let item of groceryItems; let i = index" id="addedItem">
         {{ item }}
         <span class="minusBtn"><input type="button" value="-" (click)="deleteItem(i)"></span>
-      </div>
-   <div>
+      </div><br>
+   <div><!--
     <input type="button" value="Save" (click)="saveItems()">
+
+   -->
+     <button (click)="saveItems()"><img src="./assets/save.png" alt="save-image"></button>
    </div>
     </form>
   </div>
+</div>
+  

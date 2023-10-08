@@ -3,7 +3,6 @@
     margin: 0;
     box-sizing: content-box;
     font-family: 'Times New Roman', Times, serif;
-    background-color:rgb(196, 184, 184);
   }
   
   .container {
@@ -14,9 +13,11 @@
     padding: 4em;
    cursor: pointer;
   }
+  /*
   .container:hover{
     box-shadow: 1px 1px 2px 1px grey
   }
+*/
   h2{
     padding-bottom: 1em;
   }
@@ -67,4 +68,10 @@
   }
   p{
     margin-top: 0.5em;
+  }
+  .linkme{
+    margin-left: 50px;
+  }
+  .linkme1{
+    margin-left: 100px;
   }

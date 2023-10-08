@@ -3,17 +3,64 @@
     margin: 0;
     box-sizing: content-box;
     font-family: 'Times New Roman', Times, serif;
-    background-color:rgb(196, 184, 184);
+   
  }
  
+ h1{
+    color: rgb(233, 227, 227);
+    text-shadow: 1px 2px grey;
+
+ }
  
+ .sidenav {
+    height: 100%;
+    width: 190px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: hsl(0, 8%, 70%);
+    overflow-x: hidden;
+    padding-top: 40px;
+    margin-top: 60px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+  }
+  
+  .sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: clamp(1.2em, 2vw, 1.5em);
+    color: #140202;
+    display: block;
+    font-weight: bold;
+  }
+  
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  
+  /* Creating hr in every achor element of class sidenav in html page */
+
+  .sidenav a::after {
+    content: "";
+    display: block;
+    height: 1px;
+    background-color: black; /* Or any color you want for the line */
+    margin: 0.5em 0; /* Optional: Add some spacing around the line */
+}
+
+.sidenav a:last-child::after {
+    display: none; /* This removes the line after the last anchor element */
+}
+
+
  .container{
-     margin-top: 5em;
      display: flex;
      flex-direction: column;
      justify-items: center;
      text-align: center;
-     padding: 2em;
+     padding: 1.1em;
  }
  
  
@@ -97,14 +144,16 @@
  }
  button{
     background-color: white;
+    border-color: white;
+    border-style: none;
  }
+
  button img{
-    height: 2.5em;
-    width: 3em;
-    border: none;
-    cursor: pointer;
- }
- 
+  height: 2.5em;
+  width: 3em;
+  cursor: pointer;
+}
+
  @media screen and (max-width:600px) {
      .formGrocery{
          margin: 2em auto auto auto;
@@ -112,5 +161,47 @@
      
          width: auto;
      }
+    
    
  }
+ @media screen and (max-width: 750px) {
+
+  .container{
+    margin-top: 6rem;
+   }
+     .sidenav{
+      top:60px;
+      height: auto;
+      width: 100%;
+      padding: auto;
+      margin: auto;
+      display: flex;
+      justify-content: space-evenly;
+     }
+     h1{
+      text-align: center;
+     }
+
+
+     .sidenav a {
+      display: inline-block; /* Display anchors side by side */
+      margin:auto;    
+      padding:auto;
+     
+    
+  }
+
+  .sidenav a::after {
+      content: "";
+      display: inline-block;
+      height: 20px;         /* Adjust based on desired line height */
+      width: 2px;
+      background-color: black;
+      vertical-align: middle;
+      margin-left: 10px;
+  }
+
+
+  
+     
+}
